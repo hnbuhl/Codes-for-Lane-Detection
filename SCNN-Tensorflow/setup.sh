@@ -1,0 +1,1 @@
+export PYTHONPATH="${PYTHONPATH}:`pwd`/lane-detection-model/lanenet_model"
