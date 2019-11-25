@@ -76,6 +76,8 @@ def test_lanenet(image_path, weights_path, use_gpu, image_list, batch_size, save
     sess = tf.Session(config=sess_config)
     with sess.as_default():
         sess.run(tf.global_variables_initializer())
+        import IPython
+        IPython.embed()
         saver.restore(sess=sess, save_path=weights_path)
         for i in range(math.ceil(len(image_list) / batch_size)):
             print(i)
